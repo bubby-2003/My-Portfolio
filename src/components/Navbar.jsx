@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Sun, Moon, Menu, X } from 'lucide-react'
+import { Sun, Moon, Menu, X, Download } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -78,7 +78,16 @@ export default function Navbar({ darkMode, setDarkMode }) {
           </div>
 
           {/* Right side */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            {/* Resume download — hidden on mobile */}
+            <a
+              href="/My-Portfolio/VenkatBM_Resume.pdf"
+              download="VenkatBM_Resume.pdf"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 shadow-md transition-all duration-300 hover:scale-105"
+            >
+              <Download size={13} /> Resume
+            </a>
+
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`p-2 rounded-xl transition-all duration-300 hover:scale-110 ${

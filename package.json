@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://2440594.github.io/venkat-react-portfolio",
+  "homepage": "https://bubby-2003.github.io/My-Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

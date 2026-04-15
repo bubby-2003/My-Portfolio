@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { ArrowDown, Mail, ExternalLink } from 'lucide-react'
+import { ArrowDown, Mail, ExternalLink, Download } from 'lucide-react'
 import venkatPhoto from '../assets/venkat.jpg'
 
 const roles = [
@@ -122,21 +122,28 @@ export default function Hero({ darkMode }) {
               full-stack applications. Also a <span className="font-semibold text-purple-500">Patent Holder</span> 🏆
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-10">
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10">
               <button
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 hover:-translate-y-0.5"
+                className="flex items-center gap-2 px-5 py-3 rounded-xl font-semibold bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 hover:-translate-y-0.5 text-sm"
               >
-                View My Work <ExternalLink size={16} />
+                View My Work <ExternalLink size={15} />
               </button>
+              <a
+                href="/My-Portfolio/VenkatBM_Resume.pdf"
+                download="VenkatBM_Resume.pdf"
+                className="flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transition-all duration-300 hover:-translate-y-0.5"
+              >
+                <Download size={15} /> Resume
+              </a>
               <a
                 href="#contact"
                 onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}
-                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold border-2 transition-all duration-300 hover:-translate-y-0.5 ${
+                className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold border-2 transition-all duration-300 hover:-translate-y-0.5 text-sm ${
                   darkMode ? 'border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10' : 'border-indigo-300 text-indigo-600 hover:bg-indigo-50'
                 }`}
               >
-                <Mail size={16} /> Get In Touch
+                <Mail size={15} /> Contact
               </a>
             </div>
 
