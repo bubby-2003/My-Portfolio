@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { ArrowDown, Mail, ExternalLink } from 'lucide-react'
+import venkatPhoto from '../assets/venkat.jpg'
 
 const roles = [
   'Full Stack Developer',
@@ -157,34 +158,48 @@ export default function Hero({ darkMode }) {
             </div>
           </div>
 
-          {/* Right: Avatar */}
+          {/* Right: Real Photo */}
           <div className={`flex-1 flex justify-center transition-all duration-700 delay-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="relative">
-              <div className="absolute -inset-4 rounded-full border-2 border-dashed border-indigo-500/30 rotate-slow" />
-              <div className="absolute -inset-8 rounded-full border border-purple-500/20 rotate-slow" style={{ animationDirection: 'reverse', animationDuration: '30s' }} />
 
-              <div className={`relative w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center shadow-2xl float-anim ${
-                darkMode
-                  ? 'bg-gradient-to-br from-indigo-900 via-purple-900 to-gray-900 border-4 border-indigo-500/30'
-                  : 'bg-gradient-to-br from-indigo-100 via-purple-100 to-white border-4 border-indigo-200'
-              }`}>
-                <div className="text-center">
-                  <div className="text-7xl md:text-8xl mb-2">👨‍💻</div>
-                  <div className={`text-lg font-bold ${darkMode ? 'text-indigo-300' : 'text-indigo-600'}`}>Venkat B M</div>
-                  <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>@ Cognizant</div>
+              {/* Outer spinning dashed ring */}
+              <div className="absolute -inset-5 rounded-full border-2 border-dashed border-indigo-500/40 rotate-slow" />
+              {/* Second outer ring */}
+              <div className="absolute -inset-10 rounded-full border border-purple-500/20 rotate-slow" style={{ animationDirection: 'reverse', animationDuration: '25s' }} />
+
+              {/* Gradient glow behind photo */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 blur-2xl opacity-30 scale-110" />
+
+              {/* Gradient border ring */}
+              <div className="relative p-1 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-2xl float-anim">
+                <div className={`p-1 rounded-full ${darkMode ? 'bg-gray-950' : 'bg-white'}`}>
+                  <img
+                    src={venkatPhoto}
+                    alt="Venkat B M"
+                    className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover object-top"
+                  />
                 </div>
-
-                {[
-                  { label: 'Java', top: '-top-4', left: 'left-8', color: 'bg-orange-500' },
-                  { label: 'Spring', top: '-top-4', right: 'right-8', color: 'bg-green-500' },
-                  { label: 'React', bottom: '-bottom-4', left: 'left-4', color: 'bg-blue-500' },
-                  { label: 'MySQL', bottom: '-bottom-4', right: 'right-4', color: 'bg-yellow-500' },
-                ].map(({ label, top, left, right, bottom, color }) => (
-                  <div key={label} className={`absolute ${top || ''} ${left || ''} ${right || ''} ${bottom || ''} px-3 py-1 rounded-full text-white text-xs font-bold ${color} shadow-lg`}>
-                    {label}
-                  </div>
-                ))}
               </div>
+
+              {/* Tech badges */}
+              {[
+                { label: 'Java', pos: 'top-4 -left-6', color: 'bg-orange-500' },
+                { label: 'Spring', pos: 'top-4 -right-6', color: 'bg-green-500' },
+                { label: 'React', pos: 'bottom-10 -left-8', color: 'bg-blue-500' },
+                { label: 'MySQL', pos: 'bottom-10 -right-8', color: 'bg-purple-500' },
+              ].map(({ label, pos, color }) => (
+                <div key={label} className={`absolute ${pos} px-3 py-1.5 rounded-full text-white text-xs font-bold ${color} shadow-lg border-2 border-white/20 backdrop-blur-sm`}>
+                  {label}
+                </div>
+              ))}
+
+              {/* Cognizant badge at bottom */}
+              <div className={`absolute -bottom-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border whitespace-nowrap ${
+                darkMode ? 'bg-gray-800 text-indigo-300 border-indigo-500/30' : 'bg-white text-indigo-600 border-indigo-200'
+              }`}>
+                @ Cognizant
+              </div>
+
             </div>
           </div>
         </div>
