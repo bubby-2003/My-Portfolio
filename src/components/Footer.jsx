@@ -15,40 +15,29 @@ export default function Footer({ darkMode }) {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
-    <footer className={`relative py-12 border-t ${
-      darkMode ? 'bg-gray-950 border-gray-800' : 'bg-white border-gray-100'
-    }`}>
+    <footer className={`relative py-12 border-t ${darkMode ? 'bg-gray-950 border-gray-800' : 'bg-white border-gray-100'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo & tagline */}
+
+          {/* Logo */}
           <div className="text-center md:text-left">
             <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
               <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
                 <Code2 size={16} className="text-white" />
               </div>
-              <span className="font-bold text-lg gradient-text">Venkat</span>
+              <span className="font-bold text-lg gradient-text">Venkat B M</span>
             </div>
-            <p className={`text-sm flex items-center gap-1 justify-center md:justify-start ${
-              darkMode ? 'text-gray-500' : 'text-gray-400'
-            }`}>
-              Built with <Heart size={13} className="text-red-500 fill-red-500" /> using React & Tailwind
+            <p className={`text-sm flex items-center gap-1 justify-center md:justify-start ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+              Built with <Heart size={13} className="text-red-500 fill-red-500" /> using React & Tailwind CSS
             </p>
           </div>
 
-          {/* Nav links */}
+          {/* Nav */}
           <div className="flex flex-wrap justify-center gap-6">
-            {['Home', 'About', 'Skills', 'Projects', 'Contact'].map(item => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={(e) => {
-                  e.preventDefault()
-                  document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })
-                }}
-                className={`text-sm nav-link transition-colors ${
-                  darkMode ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-700'
-                }`}
-              >
+            {['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'].map(item => (
+              <a key={item} href={`#${item.toLowerCase()}`}
+                onClick={(e) => { e.preventDefault(); document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' }) }}
+                className={`text-sm nav-link transition-colors ${darkMode ? 'text-gray-500 hover:text-gray-300' : 'text-gray-400 hover:text-gray-700'}`}>
                 {item}
               </a>
             ))}
@@ -57,40 +46,26 @@ export default function Footer({ darkMode }) {
           {/* Social + back to top */}
           <div className="flex items-center gap-3">
             {[
-              { icon: GithubIcon, href: 'https://github.com/venkat', label: 'GitHub' },
-              { icon: LinkedinIcon, href: 'https://linkedin.com/in/venkat', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:venkat@example.com', label: 'Email' },
+              { icon: GithubIcon, href: 'https://github.com/bubby-2003', label: 'GitHub' },
+              { icon: LinkedinIcon, href: 'https://www.linkedin.com/in/venkat-b-m/', label: 'LinkedIn' },
+              { icon: Mail, href: 'mailto:venkatbm1999@gmail.com', label: 'Email' },
             ].map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
                 className={`p-2 rounded-lg transition-all hover:scale-110 ${
-                  darkMode
-                    ? 'text-gray-500 hover:text-gray-300 hover:bg-gray-800'
-                    : 'text-gray-400 hover:text-gray-700 hover:bg-gray-100'
-                }`}
-              >
-                <Icon size={18} />
+                  darkMode ? 'text-gray-500 hover:text-gray-300 hover:bg-gray-800' : 'text-gray-400 hover:text-gray-700 hover:bg-gray-100'
+                }`}>
+                <Icon />
               </a>
             ))}
-
-            <button
-              onClick={scrollToTop}
-              aria-label="Back to top"
-              className="ml-2 p-2 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg hover:shadow-indigo-500/40 hover:scale-110 transition-all"
-            >
+            <button onClick={scrollToTop} aria-label="Back to top"
+              className="ml-2 p-2 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg hover:shadow-indigo-500/40 hover:scale-110 transition-all">
               <ArrowUp size={16} />
             </button>
           </div>
         </div>
 
-        <div className={`text-center mt-8 pt-6 border-t text-xs ${
-          darkMode ? 'border-gray-800 text-gray-600' : 'border-gray-100 text-gray-400'
-        }`}>
-          © {new Date().getFullYear()} Venkat. All rights reserved. · Made with passion in India 🇮🇳
+        <div className={`text-center mt-8 pt-6 border-t text-xs ${darkMode ? 'border-gray-800 text-gray-600' : 'border-gray-100 text-gray-400'}`}>
+          © {new Date().getFullYear()} Venkat B M · Programmer Analyst Trainee @ Cognizant · Patent Holder 🏆 · Made with passion in Bangalore, India 🇮🇳
         </div>
       </div>
     </footer>

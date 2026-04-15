@@ -11,30 +11,24 @@ const LinkedinIcon = () => (
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
   </svg>
 )
-const TwitterXIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-  </svg>
-)
 
 const contactInfo = [
-  { icon: Mail, label: 'Email', value: 'venkat@example.com', href: 'mailto:venkat@example.com', color: 'from-blue-500 to-indigo-500' },
-  { icon: Phone, label: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210', color: 'from-green-500 to-emerald-500' },
-  { icon: MapPin, label: 'Location', value: 'India', href: '#', color: 'from-purple-500 to-pink-500' },
+  { icon: Mail, label: 'Email', value: 'venkatbm1999@gmail.com', href: 'mailto:venkatbm1999@gmail.com', color: 'from-blue-500 to-indigo-500' },
+  { icon: Phone, label: 'Phone', value: '+91 80735 80509', href: 'tel:+918073580509', color: 'from-green-500 to-emerald-500' },
+  { icon: MapPin, label: 'Location', value: 'Bangalore, India', href: '#', color: 'from-purple-500 to-pink-500' },
 ]
 
 const socials = [
-  { icon: GithubIcon, href: 'https://github.com/venkat', label: 'GitHub', color: 'hover:bg-gray-700 hover:text-white' },
-  { icon: LinkedinIcon, href: 'https://linkedin.com/in/venkat', label: 'LinkedIn', color: 'hover:bg-blue-600 hover:text-white' },
-  { icon: TwitterXIcon, href: 'https://twitter.com/venkat', label: 'Twitter', color: 'hover:bg-sky-500 hover:text-white' },
-  { icon: Mail, href: 'mailto:venkat@example.com', label: 'Email', color: 'hover:bg-red-500 hover:text-white' },
+  { icon: GithubIcon, href: 'https://github.com/bubby-2003', label: 'GitHub', color: 'hover:bg-gray-700 hover:text-white' },
+  { icon: LinkedinIcon, href: 'https://www.linkedin.com/in/venkat-b-m/', label: 'LinkedIn', color: 'hover:bg-blue-600 hover:text-white' },
+  { icon: Mail, href: 'mailto:venkatbm1999@gmail.com', label: 'Email', color: 'hover:bg-red-500 hover:text-white' },
 ]
 
 export default function Contact({ darkMode }) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' })
-  const [status, setStatus] = useState(null) // 'sending' | 'success' | 'error'
+  const [status, setStatus] = useState(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,7 +44,6 @@ export default function Contact({ darkMode }) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('sending')
-    // Simulate sending
     await new Promise(r => setTimeout(r, 1500))
     setStatus('success')
     setForm({ name: '', email: '', subject: '', message: '' })
@@ -58,46 +51,35 @@ export default function Contact({ darkMode }) {
   }
 
   const inputClass = `w-full px-4 py-3 rounded-xl border text-sm outline-none transition-all duration-200 focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500 ${
-    darkMode
-      ? 'bg-gray-700/50 border-gray-600 text-gray-200 placeholder-gray-500'
-      : 'bg-gray-50 border-gray-200 text-gray-800 placeholder-gray-400'
+    darkMode ? 'bg-gray-700/50 border-gray-600 text-gray-200 placeholder-gray-500' : 'bg-gray-50 border-gray-200 text-gray-800 placeholder-gray-400'
   }`
 
   return (
-    <section
-      id="contact"
-      ref={ref}
-      className={`py-24 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}
-    >
+    <section id="contact" ref={ref} className={`py-24 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+
         <div className={`text-center mb-16 section-hidden ${visible ? 'section-visible' : ''}`}>
           <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 ${
             darkMode ? 'bg-indigo-500/10 text-indigo-400' : 'bg-indigo-50 text-indigo-600'
-          }`}>
-            Contact Me
-          </span>
+          }`}>Contact Me</span>
           <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-            Let's <span className="gradient-text">Work Together</span>
+            Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className={`max-w-xl mx-auto ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            Have a project in mind or want to collaborate? I'd love to hear from you. Let's build something amazing together!
+            Have an opportunity, project, or just want to say hi? I'd love to hear from you!
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto mt-4" />
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
-          {/* Left panel */}
+
+          {/* Left */}
           <div className={`lg:col-span-2 space-y-6 section-hidden ${visible ? 'section-visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
-            {/* Contact info */}
             {contactInfo.map(({ icon: Icon, label, value, href, color }) => (
-              <a
-                key={label}
-                href={href}
+              <a key={label} href={href}
                 className={`flex items-center gap-4 p-5 rounded-2xl border glow-card group transition-all ${
                   darkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-100 shadow-sm'
-                }`}
-              >
+                }`}>
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform`}>
                   <Icon size={20} className="text-white" />
                 </div>
@@ -108,147 +90,73 @@ export default function Contact({ darkMode }) {
               </a>
             ))}
 
-            {/* Social links */}
-            <div className={`p-5 rounded-2xl border ${
-              darkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-100 shadow-sm'
-            }`}>
-              <p className={`text-sm font-semibold mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                Connect on Social
-              </p>
+            <div className={`p-5 rounded-2xl border ${darkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-100 shadow-sm'}`}>
+              <p className={`text-sm font-semibold mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Connect on Social</p>
               <div className="flex gap-3">
                 {socials.map(({ icon: Icon, href, label, color }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
                     className={`p-3 rounded-xl transition-all duration-200 hover:scale-110 ${
-                      darkMode
-                        ? `bg-gray-700 text-gray-400 ${color}`
-                        : `bg-gray-100 text-gray-600 ${color}`
-                    }`}
-                  >
-                    <Icon size={18} />
+                      darkMode ? `bg-gray-700 text-gray-400 ${color}` : `bg-gray-100 text-gray-600 ${color}`
+                    }`}>
+                    <Icon />
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* Availability card */}
-            <div className={`p-5 rounded-2xl border bg-gradient-to-br ${
-              darkMode ? 'from-indigo-900/30 to-purple-900/20 border-indigo-700/30' : 'from-indigo-50 to-purple-50 border-indigo-100'
+            <div className={`p-5 rounded-2xl border ${
+              darkMode ? 'from-indigo-900/30 to-purple-900/20 border-indigo-700/30 bg-gradient-to-br' : 'from-indigo-50 to-purple-50 border-indigo-100 bg-gradient-to-br'
             }`}>
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-green-400 pulse-dot" />
-                <span className={`text-sm font-semibold ${darkMode ? 'text-indigo-300' : 'text-indigo-700'}`}>
-                  Available for Work
-                </span>
+                <span className={`text-sm font-semibold ${darkMode ? 'text-indigo-300' : 'text-indigo-700'}`}>Open to Full-Time Roles</span>
               </div>
               <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                Currently open to full-time and freelance opportunities. Response within 24 hours.
+                Currently at Cognizant and actively open to exciting full-time opportunities. Response within 24 hours.
               </p>
             </div>
           </div>
 
-          {/* Right: Form */}
+          {/* Form */}
           <div className={`lg:col-span-3 section-hidden ${visible ? 'section-visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-            <form
-              onSubmit={handleSubmit}
-              className={`p-8 rounded-2xl border ${
-                darkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-100 shadow-sm'
-              }`}
-            >
-              <h3 className={`text-xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                Send Me a Message
-              </h3>
+            <form onSubmit={handleSubmit} className={`p-8 rounded-2xl border ${
+              darkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-100 shadow-sm'
+            }`}>
+              <h3 className={`text-xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Send Me a Message</h3>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Your Name *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="John Doe"
-                    required
-                    className={inputClass}
-                  />
+                  <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Your Name *</label>
+                  <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="John Doe" required className={inputClass} />
                 </div>
                 <div>
-                  <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="john@example.com"
-                    required
-                    className={inputClass}
-                  />
+                  <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Email Address *</label>
+                  <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="john@example.com" required className={inputClass} />
                 </div>
               </div>
 
               <div className="mb-4">
-                <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={form.subject}
-                  onChange={handleChange}
-                  placeholder="Project collaboration"
-                  className={inputClass}
-                />
+                <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Subject</label>
+                <input type="text" name="subject" value={form.subject} onChange={handleChange} placeholder="Job opportunity / Collaboration" className={inputClass} />
               </div>
 
               <div className="mb-6">
-                <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Message *
-                </label>
-                <textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder="Tell me about your project..."
-                  required
-                  rows={5}
-                  className={`${inputClass} resize-none`}
-                />
+                <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Message *</label>
+                <textarea name="message" value={form.message} onChange={handleChange} placeholder="Tell me about the opportunity or project..." required rows={5} className={`${inputClass} resize-none`} />
               </div>
 
-              {/* Status messages */}
               {status === 'success' && (
                 <div className="flex items-center gap-2 p-3 rounded-xl bg-green-500/10 text-green-500 border border-green-500/20 mb-4 text-sm">
-                  <CheckCircle size={16} /> Message sent successfully! I'll get back to you soon.
-                </div>
-              )}
-              {status === 'error' && (
-                <div className="flex items-center gap-2 p-3 rounded-xl bg-red-500/10 text-red-500 border border-red-500/20 mb-4 text-sm">
-                  <AlertCircle size={16} /> Something went wrong. Please try again.
+                  <CheckCircle size={16} /> Message sent! I'll get back to you soon.
                 </div>
               )}
 
-              <button
-                type="submit"
-                disabled={status === 'sending'}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
-              >
+              <button type="submit" disabled={status === 'sending'}
+                className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0">
                 {status === 'sending' ? (
-                  <>
-                    <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Sending...
-                  </>
+                  <><span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Sending...</>
                 ) : (
-                  <>
-                    <Send size={16} /> Send Message
-                  </>
+                  <><Send size={16} /> Send Message</>
                 )}
               </button>
             </form>
