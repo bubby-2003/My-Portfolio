@@ -33,7 +33,7 @@ export default function Footer({ darkMode }) {
           </div>
 
           {/* Nav */}
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-5">
             {['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'].map(item => (
               <a key={item} href={`#${item.toLowerCase()}`}
                 onClick={(e) => { e.preventDefault(); document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' }) }}

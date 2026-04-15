@@ -103,7 +103,7 @@ export default function Experience({ darkMode }) {
           <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 ${
             darkMode ? 'bg-indigo-500/10 text-indigo-400' : 'bg-indigo-50 text-indigo-600'
           }`}>My Journey</span>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Experience &amp; <span className="gradient-text">Education</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto" />
@@ -119,13 +119,13 @@ export default function Experience({ darkMode }) {
                 {timeline.map(({ title, company, period, location, description, icon: Icon, color }, idx) => (
                   <div
                     key={title}
-                    className={`relative pl-14 section-hidden ${visible ? 'section-visible' : ''}`}
+                    className={`relative pl-12 sm:pl-14 section-hidden ${visible ? 'section-visible' : ''}`}
                     style={{ transitionDelay: `${idx * 0.12}s` }}
                   >
                     <div className={`absolute left-0 w-10 h-10 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center shadow-lg z-10`}>
                       <Icon size={16} className="text-white" />
                     </div>
-                    <div className={`p-6 rounded-2xl border glow-card ${
+                    <div className={`p-4 sm:p-6 rounded-2xl border glow-card ${
                       darkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-100 shadow-sm'
                     }`}>
                       <div className="flex flex-wrap items-start justify-between gap-2 mb-3">

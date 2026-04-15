@@ -76,9 +76,9 @@ export default function Hero({ darkMode }) {
     >
       {/* Background orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className={`absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl opacity-20 ${darkMode ? 'bg-indigo-600' : 'bg-indigo-300'}`} />
-        <div className={`absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl opacity-15 ${darkMode ? 'bg-purple-600' : 'bg-purple-300'}`} />
-        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-3xl opacity-10 ${darkMode ? 'bg-pink-600' : 'bg-pink-300'}`} />
+        <div className={`absolute top-20 left-10 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full blur-3xl opacity-20 ${darkMode ? 'bg-indigo-600' : 'bg-indigo-300'}`} />
+        <div className={`absolute bottom-20 right-10 w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full blur-3xl opacity-15 ${darkMode ? 'bg-purple-600' : 'bg-purple-300'}`} />
+        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full blur-3xl opacity-10 ${darkMode ? 'bg-pink-600' : 'bg-pink-300'}`} />
         {particles.map((p) => (
           <div
             key={p.id}
@@ -99,24 +99,24 @@ export default function Hero({ darkMode }) {
 
           {/* Left */}
           <div className={`flex-1 text-center lg:text-left transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-6 ${
+            <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium mb-5 ${
               darkMode ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20' : 'bg-indigo-50 text-indigo-600 border border-indigo-200'
             }`}>
-              <span className="w-2 h-2 rounded-full bg-green-400 pulse-dot" />
+              <span className="w-2 h-2 rounded-full bg-green-400 pulse-dot flex-shrink-0" />
               Open to Full-Time Opportunities
             </div>
 
-            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
               Hi, I&apos;m{' '}
               <span className="gradient-text whitespace-nowrap">Venkat B M</span>
             </h1>
 
-            <h2 className={`text-2xl md:text-3xl font-semibold mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            <h2 className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-5 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
               <span className="text-indigo-500">{displayText}</span>
               <span className="cursor" />
             </h2>
 
-            <p className={`text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            <p className={`text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-7 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               Motivated backend developer at <span className="font-semibold text-indigo-500">Cognizant</span> with
               expertise in Java, Spring Boot & microservices. Building secure, scalable RESTful APIs and
               full-stack applications. Also a <span className="font-semibold text-purple-500">Patent Holder</span> 🏆
@@ -176,19 +176,19 @@ export default function Hero({ darkMode }) {
                   <img
                     src={venkatPhoto}
                     alt="Venkat B M"
-                    className="w-60 h-60 md:w-72 md:h-72 rounded-full object-cover object-top"
+                    className="w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full object-cover object-top"
                   />
                 </div>
               </div>
 
-              {/* Tech badges */}
+              {/* Tech badges — hidden on very small screens */}
               {[
-                { label: 'Java', pos: 'top-4 -left-6', color: 'bg-orange-500' },
-                { label: 'Spring', pos: 'top-4 -right-6', color: 'bg-green-500' },
+                { label: 'Java', pos: 'top-4 -left-7', color: 'bg-orange-500' },
+                { label: 'Spring', pos: 'top-4 -right-7', color: 'bg-green-500' },
                 { label: 'React', pos: 'bottom-10 -left-8', color: 'bg-blue-500' },
                 { label: 'MySQL', pos: 'bottom-10 -right-8', color: 'bg-purple-500' },
               ].map(({ label, pos, color }) => (
-                <div key={label} className={`absolute ${pos} px-3 py-1.5 rounded-full text-white text-xs font-bold ${color} shadow-lg border-2 border-white/20 backdrop-blur-sm`}>
+                <div key={label} className={`hidden sm:block absolute ${pos} px-2.5 py-1 rounded-full text-white text-xs font-bold ${color} shadow-lg border-2 border-white/20 backdrop-blur-sm`}>
                   {label}
                 </div>
               ))}

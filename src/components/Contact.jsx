@@ -62,7 +62,7 @@ export default function Contact({ darkMode }) {
           <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 ${
             darkMode ? 'bg-indigo-500/10 text-indigo-400' : 'bg-indigo-50 text-indigo-600'
           }`}>Contact Me</span>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className={`max-w-xl mx-auto ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -124,10 +124,10 @@ export default function Contact({ darkMode }) {
             }`}>
               <h3 className={`text-xl font-bold mb-6 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Send Me a Message</h3>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-4">
+              <div className="grid md:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Your Name *</label>
-                  <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="e.g. Rahul Sharma" required className={inputClass} />
+                  <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="e.g. Venkat B M" required className={inputClass} />
                 </div>
                 <div>
                   <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Email Address *</label>

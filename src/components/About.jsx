@@ -29,7 +29,7 @@ export default function About({ darkMode }) {
           <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 ${
             darkMode ? 'bg-indigo-500/10 text-indigo-400' : 'bg-indigo-50 text-indigo-600'
           }`}>About Me</span>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Who I <span className="gradient-text">Am</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto" />
@@ -77,7 +77,7 @@ export default function About({ darkMode }) {
 
           {/* Right */}
           <div className={`section-hidden ${visible ? 'section-visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-2 gap-3 mb-8">
               {stats.map(({ value, label, icon: Icon }) => (
                 <div key={label} className={`p-6 rounded-2xl text-center glow-card border ${
                   darkMode ? 'bg-gray-800/50 border-gray-700' : 'bg-white border-gray-100 shadow-sm'

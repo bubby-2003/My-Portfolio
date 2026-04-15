@@ -173,7 +173,7 @@ export default function Skills({ darkMode }) {
           }`}>
             My Skills
           </span>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Technologies I <span className="gradient-text">Work With</span>
           </h2>
           <p className={`max-w-xl mx-auto text-sm ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -227,7 +227,7 @@ export default function Skills({ darkMode }) {
             </div>
 
             {/* Ring cards grid */}
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
               {active.skills.map(({ name, level, icon }) => (
                 <SkillRingCard
                   key={name}

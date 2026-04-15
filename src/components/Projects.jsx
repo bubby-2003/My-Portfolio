@@ -106,7 +106,7 @@ export default function Projects({ darkMode }) {
           <span className={`inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 ${
             darkMode ? 'bg-indigo-500/10 text-indigo-400' : 'bg-indigo-50 text-indigo-600'
           }`}>My Work</span>
-          <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className={`max-w-2xl mx-auto mb-6 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
