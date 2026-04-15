@@ -83,7 +83,7 @@ const timeline = [
     location: 'Sira, India',
     description: [
       'Percentage: 98.64%',
-      'Physics, Chemistry, Mathematics & Computer Science stream.',
+      'Physics, Chemistry, Mathematics & Biology stream.',
     ],
     icon: GraduationCap,
     color: 'from-yellow-500 to-orange-500',
