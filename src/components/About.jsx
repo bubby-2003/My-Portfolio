@@ -60,7 +60,8 @@ export default function About({ darkMode }) {
             {[
               { icon: MapPin, label: 'Location', value: 'Bangalore, India' },
               { icon: Briefcase, label: 'Current Role', value: 'Programmer Analyst Trainee @ Cognizant' },
-              { icon: Calendar, label: 'Experience', value: '1+ Year (Capgemini Intern → Cognizant FTE)' },
+              { icon: Briefcase, label: 'Previous Company', value: 'Ex-Intern @ Capgemini (Feb – Jul 2025)' },
+              { icon: Calendar, label: 'Experience', value: '1+ Year Industry Experience' },
               { icon: GraduationCap, label: 'Education', value: 'B.Tech CSE — Presidency University (9.47 CGPA)' },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className={`flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 ${
