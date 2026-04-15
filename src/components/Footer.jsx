@@ -1,4 +1,4 @@
-import { Heart, Mail, ArrowUp } from 'lucide-react'
+import { Mail, ArrowUp } from 'lucide-react'
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
@@ -27,9 +27,6 @@ export default function Footer({ darkMode }) {
               </div>
               <span className="font-bold text-lg gradient-text">Venkat B M</span>
             </div>
-            <p className={`text-sm flex items-center gap-1 justify-center md:justify-start ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
-              Built with <Heart size={13} className="text-red-500 fill-red-500" /> using React & Tailwind CSS
-            </p>
           </div>
 
           {/* Nav */}
