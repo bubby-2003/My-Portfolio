@@ -117,9 +117,9 @@ export default function Hero({ darkMode }) {
             </h2>
 
             <p className={`text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-7 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Full Stack Developer at <span className="font-semibold text-indigo-500">Cognizant</span> with
-              1+ year of experience (Intern → PAT). Expert in Java, Spring Boot & microservices — building
-              secure, scalable APIs. Also a <span className="font-semibold text-purple-500">Patent Holder</span> 🏆
+              Programmer Analyst Trainee at <span className="font-semibold text-indigo-500">Cognizant</span> with
+              1+ year of industry experience across Capgemini &amp; Cognizant. Expert in Java, Spring Boot &amp; microservices.
+              Also a <span className="font-semibold text-purple-500">Patent Holder</span> 🏆
             </p>
 
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-10">
