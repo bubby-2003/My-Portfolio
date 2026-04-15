@@ -188,24 +188,6 @@ export default function Hero({ darkMode }) {
                 </div>
               </div>
 
-              {/* Tech badges — hidden on very small screens */}
-              {[
-                { label: 'Java', pos: 'top-4 -left-7', color: 'bg-orange-500' },
-                { label: 'Spring', pos: 'top-4 -right-7', color: 'bg-green-500' },
-                { label: 'React', pos: 'bottom-10 -left-8', color: 'bg-blue-500' },
-                { label: 'MySQL', pos: 'bottom-10 -right-8', color: 'bg-purple-500' },
-              ].map(({ label, pos, color }) => (
-                <div key={label} className={`hidden sm:block absolute ${pos} px-2.5 py-1 rounded-full text-white text-xs font-bold ${color} shadow-lg border-2 border-white/20 backdrop-blur-sm`}>
-                  {label}
-                </div>
-              ))}
-
-              {/* Cognizant badge at bottom */}
-              <div className={`absolute -bottom-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-bold shadow-lg border whitespace-nowrap ${
-                darkMode ? 'bg-gray-800 text-indigo-300 border-indigo-500/30' : 'bg-white text-indigo-600 border-indigo-200'
-              }`}>
-                @ Cognizant
-              </div>
 
             </div>
           </div>
