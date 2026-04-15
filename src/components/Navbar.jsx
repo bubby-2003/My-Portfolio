@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Sun, Moon, Menu, X, Code2 } from 'lucide-react'
+import { Sun, Moon, Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -54,9 +54,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
             className="flex items-center gap-2 group"
           >
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:shadow-indigo-500/40 transition-all duration-300 group-hover:scale-110">
-              <Code2 size={18} className="text-white" />
+              <span className="text-white font-black text-sm tracking-tight">VBM</span>
             </div>
-            <span className="font-bold text-lg gradient-text">Venkat</span>
+            <span className="font-bold text-lg gradient-text">Venkat B M</span>
           </a>
 
           {/* Desktop nav */}

@@ -127,11 +127,11 @@ export default function Contact({ darkMode }) {
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Your Name *</label>
-                  <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="John Doe" required className={inputClass} />
+                  <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="e.g. Rahul Sharma" required className={inputClass} />
                 </div>
                 <div>
                   <label className={`block text-xs font-medium mb-1.5 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Email Address *</label>
-                  <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="john@example.com" required className={inputClass} />
+                  <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="yourname@gmail.com" required className={inputClass} />
                 </div>
               </div>
 

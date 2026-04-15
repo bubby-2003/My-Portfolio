@@ -1,4 +1,4 @@
-import { Heart, Mail, ArrowUp, Code2 } from 'lucide-react'
+import { Heart, Mail, ArrowUp } from 'lucide-react'
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
@@ -23,7 +23,7 @@ export default function Footer({ darkMode }) {
           <div className="text-center md:text-left">
             <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
               <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                <Code2 size={16} className="text-white" />
+                <span className="text-white font-black text-xs tracking-tight">VBM</span>
               </div>
               <span className="font-bold text-lg gradient-text">Venkat B M</span>
             </div>

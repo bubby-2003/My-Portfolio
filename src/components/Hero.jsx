@@ -106,9 +106,9 @@ export default function Hero({ darkMode }) {
               Open to Full-Time Opportunities
             </div>
 
-            <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+            <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
               Hi, I&apos;m{' '}
-              <span className="gradient-text">Venkat B M</span>
+              <span className="gradient-text whitespace-nowrap">Venkat B M</span>
             </h1>
 
             <h2 className={`text-2xl md:text-3xl font-semibold mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
