@@ -34,33 +34,6 @@ const timeline = [
     color: 'from-violet-500 to-indigo-500',
   },
   {
-    type: 'work',
-    title: 'Web Development Intern',
-    company: 'Octanet Pvt Ltd',
-    period: 'Jul 2024 – Aug 2024',
-    location: 'Bangalore, India',
-    description: [
-      'Built a responsive landing page using HTML5 & CSS3 with cross-browser compatibility.',
-      'Developed a feature-rich To-Do List app using React with efficient state management and reusable components.',
-    ],
-    icon: Briefcase,
-    color: 'from-blue-500 to-cyan-500',
-  },
-  {
-    type: 'work',
-    title: 'Software Development Intern',
-    company: 'Codsoft',
-    period: 'Sep 2023 – Oct 2023',
-    location: 'Bangalore, India',
-    description: [
-      'Developed and maintained scalable Java applications following OOP principles.',
-      'Designed complex system modules with clean, maintainable code.',
-      'Participated in code reviews and Agile processes, improving team collaboration and code quality.',
-    ],
-    icon: Briefcase,
-    color: 'from-green-500 to-emerald-500',
-  },
-  {
     type: 'education',
     title: 'B.Tech — Computer Science & Engineering',
     company: 'Presidency University',
