@@ -9,6 +9,26 @@ const GithubIcon = ({ size = 16 }) => (
 
 const projects = [
   {
+    title: 'CIB Client Resource Onboarding Portal',
+    subtitle: 'Cognizant — Live Production Project',
+    description:
+      'An enterprise-grade, end-to-end automated workflow portal built at Cognizant for the CIB Line of Business. Replaced manual email/Excel-based onboarding with a centralized platform supporting a 15-stage lifecycle, role-based access control, document generation, PII masking, and real-time analytics.',
+    tags: ['Java', 'Spring Boot', 'React.js', 'Spring Security', 'MySQL', 'REST APIs', 'AWS CloudFront', 'Role-Based Access'],
+    github: null,
+    live: 'https://d1eb83n0xdtkkc.cloudfront.net/',
+    emoji: '🏢',
+    gradient: 'from-emerald-500 to-teal-500',
+    featured: true,
+    production: true,
+    period: '2025 – Present · Cognizant',
+    highlights: [
+      '15-stage onboarding lifecycle with multi-role workflow automation (PMO, SL Lead, SL PM, MDU Lead, IDRF Team)',
+      'Role-based PII masking — sensitive data hidden/masked based on user role and lifecycle stage',
+      'Excel upload engine with reconciliation, duplicate conflict resolution, and data validation',
+      'Auto-generates IDRF, ESA & Resource forms; custom Query Builder with bar/pie analytics dashboard',
+    ],
+  },
+  {
     title: 'Vehicle Service Booking System',
     subtitle: 'VSBS — Full Stack Project',
     description:
@@ -124,14 +144,19 @@ export default function Projects({ darkMode }) {
               } ${project.featured ? 'ring-2 ring-indigo-500/30' : ''}`}
               style={{ transitionDelay: `${idx * 0.1}s` }}
             >
-              {/* Featured / Patent badge */}
+              {/* Featured / Patent / Production badge */}
               <div className="absolute top-3 right-3 z-10 flex gap-2">
                 {project.patent && (
                   <span className="px-2 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow-lg flex items-center gap-1">
                     <Award size={10} /> Patent
                   </span>
                 )}
-                {project.featured && !project.patent && (
+                {project.production && (
+                  <span className="px-2 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" /> Live
+                  </span>
+                )}
+                {project.featured && !project.patent && !project.production && (
                   <span className="px-2 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg">
                     Featured
                   </span>
@@ -181,6 +206,12 @@ export default function Projects({ darkMode }) {
                 {/* Footer */}
                 <div className={`flex items-center justify-end pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-gray-100'}`}>
                   <div className="flex items-center gap-2">
+                    {project.live && (
+                      <a href={project.live} target="_blank" rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600 transition-all hover:scale-105 shadow-sm">
+                        <ExternalLink size={12} /> Live Demo
+                      </a>
+                    )}
                     {project.github && (
                       <a href={project.github} target="_blank" rel="noopener noreferrer"
                         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all hover:scale-105 ${
