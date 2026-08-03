@@ -29,6 +29,25 @@ const projects = [
     ],
   },
   {
+    title: 'Hospital Management System',
+    subtitle: 'Full Stack — Microservices Architecture',
+    description:
+      'A full-stack online Hospital Management System built with React and Java Spring Boot microservices. Enables end-to-end hospital operations including patient appointment booking, doctor scheduling, and overall hospital administration through a clean, responsive web interface.',
+    tags: ['React', 'Java', 'Spring Boot', 'Microservices', 'REST APIs', 'Spring Security', 'MySQL', 'Axios'],
+    github: 'https://github.com/bubby-2003',
+    live: null,
+    emoji: '🏥',
+    gradient: 'from-rose-500 to-pink-500',
+    featured: true,
+    period: '2025 – 2026',
+    highlights: [
+      'Patient appointment booking and doctor schedule management',
+      'Microservices architecture for scalability and separation of concerns',
+      'Role-based access for Patients, Doctors, and Admin',
+      'Real-time availability tracking and appointment status updates',
+    ],
+  },
+  {
     title: 'Vehicle Service Booking System',
     subtitle: 'VSBS — Full Stack Project',
     description:
