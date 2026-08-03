@@ -6,10 +6,10 @@ const timeline = [
     type: 'work',
     title: 'Programmer Analyst',
     company: 'Cognizant Technology Solutions',
-    period: 'Jul 1, 2026 – Present',
+    period: 'Jul 31, 2026 – Present',
     location: 'Bangalore, India',
     description: [
-      'Promoted to Programmer Analyst at Cognizant effective July 1, 2026.',
+      'Promoted to Programmer Analyst at Cognizant effective July 31, 2026.',
       'Leading development of Java Spring Boot microservices and RESTful APIs.',
       'Driving frontend development using React.js and integrating with backend services.',
       'Collaborating in Agile sprints, code reviews, and cross-functional team discussions.',

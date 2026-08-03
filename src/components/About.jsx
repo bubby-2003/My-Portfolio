@@ -45,7 +45,7 @@ export default function About({ darkMode }) {
               <h3 className={`text-xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>A bit about myself</h3>
               <p className={`leading-relaxed mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 I'm <span className="font-semibold text-indigo-500">Venkat B M</span>, a passionate Full Stack Developer
-                currently working as a <span className="font-semibold">Programmer Analyst at Cognizant</span> (promoted July 1, 2026),
+                currently working as a <span className="font-semibold">Programmer Analyst at Cognizant</span> (promoted July 31, 2026),
                 with 1+ year of industry experience.
                 I specialise in Java, Spring Boot, and microservices — building secure, scalable RESTful APIs.
               </p>
