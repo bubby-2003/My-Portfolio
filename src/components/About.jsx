@@ -45,9 +45,8 @@ export default function About({ darkMode }) {
               <h3 className={`text-xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>A bit about myself</h3>
               <p className={`leading-relaxed mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 I'm <span className="font-semibold text-indigo-500">Venkat B M</span>, a passionate Full Stack Developer
-                currently working as a <span className="font-semibold">Programmer Analyst at Cognizant</span> (promoted July 1, 2026).
-                Prior to this, I was a Full Stack Developer Intern at <span className="font-semibold">Capgemini</span> (Feb 2025 – Jul 2025),
-                giving me 1+ year of combined industry experience.
+                currently working as a <span className="font-semibold">Programmer Analyst at Cognizant</span> (promoted July 1, 2026),
+                with 1+ year of industry experience.
                 I specialise in Java, Spring Boot, and microservices — building secure, scalable RESTful APIs.
               </p>
               <p className={`leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -60,7 +59,6 @@ export default function About({ darkMode }) {
             {[
               { icon: MapPin, label: 'Location', value: 'Bangalore, India' },
               { icon: Briefcase, label: 'Current Role', value: 'Programmer Analyst @ Cognizant' },
-              { icon: Briefcase, label: 'Previous Company', value: 'Ex-Intern @ Capgemini' },
               { icon: Calendar, label: 'Experience', value: '1+ Year Industry Experience' },
               { icon: GraduationCap, label: 'Education', value: 'B.Tech CSE — Presidency University (9.47 CGPA)' },
             ].map(({ icon: Icon, label, value }) => (

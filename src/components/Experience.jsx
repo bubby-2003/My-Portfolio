@@ -35,21 +35,6 @@ const timeline = [
     color: 'from-violet-500 to-indigo-500',
   },
   {
-    type: 'work',
-    title: 'Intern — Full Stack Developer',
-    company: 'Capgemini',
-    period: 'Feb 2025 – Jul 2025',
-    location: 'Bangalore, India',
-    description: [
-      'Worked as a Full Stack Developer Intern at Capgemini prior to joining Cognizant.',
-      'Developed backend services using Java and Spring Boot.',
-      'Gained hands-on experience with microservices architecture and RESTful API design.',
-      'Contributed to React.js frontend tasks and integrated APIs using Axios.',
-    ],
-    icon: Briefcase,
-    color: 'from-violet-500 to-indigo-500',
-  },
-  {
     type: 'education',
     title: 'B.Tech — Computer Science & Engineering',
     company: 'Presidency University',
