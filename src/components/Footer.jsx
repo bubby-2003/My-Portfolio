@@ -62,7 +62,7 @@ export default function Footer({ darkMode }) {
         </div>
 
         <div className={`text-center mt-8 pt-6 border-t text-xs ${darkMode ? 'border-gray-800 text-gray-600' : 'border-gray-100 text-gray-400'}`}>
-          © {new Date().getFullYear()} Venkat B M · Programmer Analyst Trainee @ Cognizant · Patent Holder 🏆 · Made with passion in Bangalore, India 🇮🇳
+          © {new Date().getFullYear()} Venkat B M · Programmer Analyst @ Cognizant · Patent Holder 🏆 · Made with passion in Bangalore, India 🇮🇳
         </div>
       </div>
     </footer>
